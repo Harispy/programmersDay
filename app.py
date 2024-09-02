@@ -1,5 +1,4 @@
 from flask import Flask, session, request, jsonify, make_response
-from flask_login import LoginManager
 from datetime import datetime as dt
 from flask_pymongo import PyMongo
 from utility import *
@@ -12,10 +11,10 @@ from group import Group
 
 login_manager = LoginManager()
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
+#app.config["MONGO_URI"] = "mongodb://localhost:27017/db"
 mongo = PyMongo(app)
 app.secret_key = b'yiwpq9853nbmc/sdkf,e.,vx%32985&&%$#@weh' # TODO: change this maybe
-# app.config["JWT_SECRET_KEY"] = b'yiwpq9853nbmc/sdkf,e.,vx%32985&&%$#@weh' # TODO: change this maybe
+# app.config["JWT_SECRET_KEY"] = b'yiwpq9853nbmc/sdkf,e.,vx%32985&&%$#@weh' 
 # jwt = JWTManager(app)
 
 
